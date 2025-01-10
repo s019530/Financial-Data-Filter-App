@@ -1,0 +1,68 @@
+.box{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   background-color: white;
+   padding: 10px 10px;
+
+   border: 2px solid black;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+.dateFilter, .revenueFilter, .netIncomeFilter {
+    flex-direction: column; 
+}
+
+.dateFilter p, .revenueFilter p, .netIncomeFilter p {
+    margin: 0; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+
+    user-select: none;
+}
+
+.bottomDiv{
+    display: flex;
+}
+
+button {
+    padding: 10px 30px;
+    margin-right: 45px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+}
+
+button:hover{
+    background-color: grey;
+}
+
+
+@media screen and (max-width: 768px){
+    button{
+        padding: 0px 0px;
+        margin-right: 0px;
+        font-size: 10px;
+    }
+
+    .buttonDiv{
+        flex-direction: column;
+    }
+
+    .dateFilter p, .revenueFilter p, .netIncomeFilter p {
+        margin: 0;
+        margin-bottom: 0px; 
+        font-size: 10px;
+    }
+
+    .dateFilter input, .revenueFilter input, .netIncomeFilter input{
+        width: 50px;
+        font-size: 12px;
+    }
+
+
+}  
