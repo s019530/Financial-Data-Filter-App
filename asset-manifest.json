@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Financial-Data-Filter-App/static/css/main.faa7024f.css",
-    "main.js": "/Financial-Data-Filter-App/static/js/main.01f53a9f.js",
+    "main.css": "/Financial-Data-Filter-App/static/css/main.040e6d2f.css",
+    "main.js": "/Financial-Data-Filter-App/static/js/main.dcc4fdea.js",
     "static/js/453.1eed256d.chunk.js": "/Financial-Data-Filter-App/static/js/453.1eed256d.chunk.js",
     "index.html": "/Financial-Data-Filter-App/index.html",
-    "main.faa7024f.css.map": "/Financial-Data-Filter-App/static/css/main.faa7024f.css.map",
-    "main.01f53a9f.js.map": "/Financial-Data-Filter-App/static/js/main.01f53a9f.js.map",
+    "main.040e6d2f.css.map": "/Financial-Data-Filter-App/static/css/main.040e6d2f.css.map",
+    "main.dcc4fdea.js.map": "/Financial-Data-Filter-App/static/js/main.dcc4fdea.js.map",
     "453.1eed256d.chunk.js.map": "/Financial-Data-Filter-App/static/js/453.1eed256d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.faa7024f.css",
-    "static/js/main.01f53a9f.js"
+    "static/css/main.040e6d2f.css",
+    "static/js/main.dcc4fdea.js"
   ]
 }
