@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Financial-Data-Filter-App/static/css/main.faa7024f.css",
-    "main.js": "/Financial-Data-Filter-App/static/js/main.75989b6b.js",
+    "main.js": "/Financial-Data-Filter-App/static/js/main.01f53a9f.js",
     "static/js/453.1eed256d.chunk.js": "/Financial-Data-Filter-App/static/js/453.1eed256d.chunk.js",
     "index.html": "/Financial-Data-Filter-App/index.html",
     "main.faa7024f.css.map": "/Financial-Data-Filter-App/static/css/main.faa7024f.css.map",
-    "main.75989b6b.js.map": "/Financial-Data-Filter-App/static/js/main.75989b6b.js.map",
+    "main.01f53a9f.js.map": "/Financial-Data-Filter-App/static/js/main.01f53a9f.js.map",
     "453.1eed256d.chunk.js.map": "/Financial-Data-Filter-App/static/js/453.1eed256d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.faa7024f.css",
-    "static/js/main.75989b6b.js"
+    "static/js/main.01f53a9f.js"
   ]
 }
