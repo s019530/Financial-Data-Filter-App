@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import TableElement from './Components/TableElement'
 import FilterMenu from './Components/FilterMenu'
@@ -17,12 +17,6 @@ function App() {
 
   useEffect(() => {
     var values = []
-    //values[0] = ["0","0","0","0","0"];
-    /*values[0] = ["1-7-25", "3", "7"];
-    values[1] = ["2-13-25", "2", "8"];
-    values[2] = ["3-1-25", "8", "11"];
-    values[3] = ["7-13-22", "4", "32"];
-    values[4] = ["12-1-23", "5", "12"];*/
 
     fetch("https://financialmodelingprep.com/api/v3/income-statement/AAPL?period=annual&apikey=GMwFClmiEMzjONoUeFyRnFhKL2ceTUhz").then(function (response){
       return response.json();
@@ -63,16 +57,8 @@ function App() {
     }
   },[sortValues]);
 
-  const firstUpdate = useRef(0);
-
   useEffect(() => {
     let arr = [];
-
-    if(firstUpdate.current != 2){
-      firstUpdate.current++;
-      return;
-    }
-
 
     if(filterValues[0] == -1 && filterValues[1] == -1 && filterValues[2] == -1 && filterValues[3] == -1 && filterValues[4] == -1 && filterValues[5] == -1){
       setTV(originalTV);

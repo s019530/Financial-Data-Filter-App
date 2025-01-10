@@ -20,7 +20,6 @@ table{
 th, td{
     padding: 15px;
     white-space: nowrap;
-    user-select: none;
 }
 
 .theTable{
@@ -34,7 +33,6 @@ th, td{
 .clickable{
     cursor: pointer; 
 }
-
 
 @media screen and (max-width: 768px){
 
