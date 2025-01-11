@@ -27,7 +27,7 @@ function TableElement(props){
   }
 
   return (
-    <div className='md:flex md:justify-center md:items-start md:h-[100vh] md:m-0 md:text-[18px] text-[6px]'>
+    <div className='flex justify-center items-start h-[100vh] md:m-0 md:text-[18px] text-[6px]'>
       <table className='custom-table'>
         <tr className="border-2 border-black border-t-0 border-l-0 border-r-0">
           <th id = 'dateHeader' className="clickable custom-th" key="date" onClick={() => {

@@ -109,8 +109,8 @@ function App() {
   return (
     <>
       <FilterMenu currentClassName={filterMenuClass} changeClassName={setFilterMenuClass} setFilterValues={setFilterValues} setTV = {setTV} originalTV = {originalTV}/>
-      <div className='tableDiv'>
-        <TableElement className='w-[100vh] bg-[rgb(220),(220),(220)]' tableValues = {TV} setSortValues = {setSortValues} sortValue = {sortValues}/>
+      <div className='bg-[rgb(220,220,220)] h-screen'>
+        <TableElement tableValues = {TV} setSortValues = {setSortValues} sortValue = {sortValues}/>
       </div>
     </>
   );
