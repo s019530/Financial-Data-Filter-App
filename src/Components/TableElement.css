@@ -1,8 +1,8 @@
 .bolded{
-    @apply text-black p-[15px] whitespace-nowrap cursor-pointer;
+    @apply text-black p-[15px] whitespace-nowrap cursor-pointer caret-transparent;
 }
 .custom-th{
-    @apply text-gray-500 p-[15px] whitespace-nowrap cursor-pointer;
+    @apply text-gray-500 p-[15px] whitespace-nowrap cursor-pointer caret-transparent select-none;
 }
 
 .data-th{

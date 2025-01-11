@@ -76,7 +76,6 @@ function App() {
         rev to = 3
         inc from = 4
         inc to = 5
-
       */
       if(filterValues[0] !== -1 && (parseFloat(year) < parseFloat(filterValues[[0]]))){
       }
@@ -101,7 +100,7 @@ function App() {
         newArr.push(arr[i]);
       }
     }
-
+    
     setTV(originalTV);
     setTV(newArr);
   },[filterValues]);

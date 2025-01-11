@@ -42,9 +42,9 @@ function TableElement(props){
             props.setSortValues([0,0,1]);
             tableButtonHandler([0,0,1]);
             }}>Net Income</th>
-          <th className="custom-th">Gross Profit</th>
-          <th className="clickable custom-th">EPS</th>
-          <th className="clickable custom-th">Operating Income</th>
+          <th className="custom-th cursor-none">Gross Profit</th>
+          <th className="custom-th cursor-none">EPS</th>
+          <th className="custom-th cursor-none">Operating Income</th>
         </tr>
         {tableValues.map(tableValues => 
         <tr>
