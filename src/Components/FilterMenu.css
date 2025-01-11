@@ -1,68 +1,24 @@
-.box{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 100%;
-   background-color: white;
-   padding: 10px 10px;
-
-   border: 2px solid black;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+.button-custom{
+    @apply px-8 py-2.5 mr-11 text-[14px] cursor-pointer rounded-[4px] bg-black
+     text-white hover:bg-gray-600;
 }
 
-
-.dateFilter, .revenueFilter, .netIncomeFilter {
-    flex-direction: column; 
+.paragraph-custom{
+    @apply m-0 font-bold mb-1 select-none;
 }
 
-.dateFilter p, .revenueFilter p, .netIncomeFilter p {
-    margin: 0; 
-    font-weight: bold; 
-    margin-bottom: 5px; 
-
-    user-select: none;
+.custom-input{
+    @apply border-[1px] border-black
 }
 
-.bottomDiv{
-    display: flex;
-}
-
-button {
-    padding: 10px 30px;
-    margin-right: 45px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 4px;
-    background-color: black;
-    color: white;
-}
-
-button:hover{
-    background-color: grey;
-}
-
-
-@media screen and (max-width: 768px){
-    button{
-        padding: 0px 0px;
-        margin-right: 0px;
-        font-size: 10px;
+@media (max-width: 768px){
+    .button-custom{
+        @apply p-0 mr-0 text-[10px] flex-col;
     }
-
-    .buttonDiv{
-        flex-direction: column;
+    .paragraph-custom{
+        @apply m-0 mb-0 text-[12px];
     }
-
-    .dateFilter p, .revenueFilter p, .netIncomeFilter p {
-        margin: 0;
-        margin-bottom: 0px; 
-        font-size: 10px;
+    .custom-input{
+        @apply w-[50px] text-[12px];
     }
-
-    .dateFilter input, .revenueFilter input, .netIncomeFilter input{
-        width: 50px;
-        font-size: 12px;
-    }
-
-
-}  
+}

@@ -88,33 +88,32 @@ function FilterMenu(props){
     return(
 
         <div className = {props.currentClassName}>
-            <div className="box">
-                <div className="dateFilter">
-                    <p>Date</p>
+            <div className="justify-between border-2 border-black w-full p-2 flex items-center bg-white shadow-lg">
+                <div className="flex-col">
+                    <p className="paragraph-custom">Date</p>
                     <div>
-                        <input id="fromYear" type="month"/>
-                        <input id="toYear" type ="month" />
+                        <input className="custom-input" id="fromYear" type="month"/>
+                        <input className="custom-input" id="toYear" type ="month" />
                     </div>
                 </div>
 
-                <div className = "revenueFilter">
-                    <p>Revenue</p>
+                <div className = "flex-col">
+                    <p className="paragraph-custom">Revenue</p>
                     <div>
-                        <input id='revFrom' type="text" placeholder="from"></input>
-                        <input id='revTo' type="text" placeholder="to"></input>
+                        <input className="custom-input" id='revFrom' type="text" placeholder="from"></input>
+                        <input className="custom-input" id='revTo' type="text" placeholder="to"></input>
                     </div>
                 </div>
-
-                <div className = "netIncomeFilter">
-                    <p>Net Income</p>
+                <div className = "flex-col">
+                    <p className="paragraph-custom">Net Income</p>
                     <div>
-                        <input id='incFrom' type="text" placeholder="from"></input>
-                        <input id='incTo' type="text" placeholder="to"></input>       
+                        <input className="custom-input" id='incFrom' type="text" placeholder="from"></input>
+                        <input className="custom-input" id='incTo' type="text" placeholder="to"></input>       
                     </div>
                 </div>
-                <div className="buttomDiv">
-                    <button onClick={resetButton}>Reset</button>
-                    <button className="savebutton" onClick={saveButton}>Save</button>
+                <div className="flex">
+                    <button onClick={resetButton} className="button-custom">Reset</button>
+                    <button className="button-custom" onClick={saveButton} >Save</button>
                 </div>
             </div>
         </div>

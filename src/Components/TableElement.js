@@ -1,4 +1,3 @@
-import { tab } from '@testing-library/user-event/dist/tab';
 import './TableElement.css'
 
 function TableElement(props){
@@ -6,65 +5,65 @@ function TableElement(props){
   let tableValues = props.tableValues;
 
   const tableButtonHandler = (arr) => {
-    var dateElement = document.getElementById('dateHeader');
-    var revenueHeader = document.getElementById('revenueHeader');
-    var netIncomeHeader = document.getElementById('netIncomeHeader');
+  var dateElement = document.getElementById('dateHeader');
+  var revenueHeader = document.getElementById('revenueHeader');
+  var netIncomeHeader = document.getElementById('netIncomeHeader');
 
     if(arr[0] === 1){
-      dateElement.classList = "clickable bolded";
-      revenueHeader.classList = 'clickable';
-      netIncomeHeader.classList = 'clickable';
+      dateElement.classList = "bolded";
+      revenueHeader.classList = 'custom-th';
+      netIncomeHeader.classList = 'custom-th';
     }
     else if(arr[1] === 1){
-      dateElement.classList = "clickable";
-      revenueHeader.classList = 'clickable bolded';
-      netIncomeHeader.classList = 'clickable';
+      dateElement.classList = "custom-th";
+      revenueHeader.classList = 'bolded';
+      netIncomeHeader.classList = 'custom-th';
       }
       else if(arr[2] === 1){
-        dateElement.classList = "clickable";
-        revenueHeader.classList = 'clickable';
-        netIncomeHeader.classList = 'clickable bolded';
+        dateElement.classList = "custom-th";
+        revenueHeader.classList = 'custom-th';
+        netIncomeHeader.classList = 'bolded';
       }
   }
 
   return (
-    <div className='theTable'>
-      <table>
-        <tr className="headerRow">
-          <th id = 'dateHeader' className="clickable" key="date" onClick={() => {
+    <div className='md:flex md:justify-center md:items-start md:h-[100vh] md:m-0 md:text-[18px] text-[6px]'>
+      <table className='custom-table'>
+        <tr className="border-2 border-black border-t-0 border-l-0 border-r-0">
+          <th id = 'dateHeader' className="clickable custom-th" key="date" onClick={() => {
             props.setSortValues([1,0,0]);
             tableButtonHandler([1,0,0]);
             }}>Date</th>
-          <th id='revenueHeader' className="clickable" key="revenue" onClick={() => {
+          <th id='revenueHeader' className="custom-th" key="revenue" onClick={() => {
             props.setSortValues([0,1,0]);
             tableButtonHandler([0,1,0]);
             }}>Revenue</th>
-          <th id='netIncomeHeader' className="clickable" key="netincome" onClick={() => {
+          <th id='netIncomeHeader' className="custom-th" key="netincome" onClick={() => {
             props.setSortValues([0,0,1]);
             tableButtonHandler([0,0,1]);
             }}>Net Income</th>
-          <th>Gross Profit</th>
-          <th>EPS</th>
-          <th>Operating Income</th>
+          <th className="custom-th">Gross Profit</th>
+          <th className="clickable custom-th">EPS</th>
+          <th className="clickable custom-th">Operating Income</th>
         </tr>
         {tableValues.map(tableValues => 
         <tr>
-          <th>
+          <th className='data-th'>
             {tableValues[0]}
           </th>
-          <th>
+          <th className='data-th'>
             {tableValues[1]}
           </th>
-          <th>
+          <th className='data-th'>
             {tableValues[2]}
           </th>
-          <th>
+          <th className='data-th'>
             {tableValues[3]}
           </th>
-          <th>
+          <th className='data-th'>
             {tableValues[4]}
           </th>
-          <th>
+          <th className='data-th'>
             {tableValues[5]}
           </th>
         </tr>

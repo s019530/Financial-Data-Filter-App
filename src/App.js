@@ -21,7 +21,7 @@ function App() {
     fetch("https://financialmodelingprep.com/api/v3/income-statement/AAPL?period=annual&apikey=GMwFClmiEMzjONoUeFyRnFhKL2ceTUhz").then(function (response){
       return response.json();
     }).then(function (data){
-      for(let i = 0; i != data.length; i++){
+      for(let i = 0; i !== data.length; i++){
         values.push([data[i]['date'], data[i]['revenue'], data[i]['netIncome'], data[i]['grossProfit'],data[i]['eps'], data[i]['operatingExpenses']]);
       }
       setTV(values);
@@ -60,12 +60,12 @@ function App() {
   useEffect(() => {
     let arr = [];
 
-    if(filterValues[0] == -1 && filterValues[1] == -1 && filterValues[2] == -1 && filterValues[3] == -1 && filterValues[4] == -1 && filterValues[5] == -1){
+    if(filterValues[0] === -1 && filterValues[1] === -1 && filterValues[2] === -1 && filterValues[3] === -1 && filterValues[4] === -1 && filterValues[5] === -1){
       setTV(originalTV);
       return;
     }
 
-    for(let i = 0; i != originalTV.length; i++){
+    for(let i = 0; i !== originalTV.length; i++){
       let displayedRevenue = originalTV[i][1];
       let displayedIncome = originalTV[i][2];
       let year = originalTV[i][0].split('-')[0];
@@ -78,17 +78,17 @@ function App() {
         inc to = 5
 
       */
-      if(filterValues[0] != -1 && (parseFloat(year) < parseFloat(filterValues[[0]]))){
+      if(filterValues[0] !== -1 && (parseFloat(year) < parseFloat(filterValues[[0]]))){
       }
-      else if(filterValues[1] != -1 && (parseFloat(year) > parseFloat(filterValues[[1]]))){
+      else if(filterValues[1] !== -1 && (parseFloat(year) > parseFloat(filterValues[[1]]))){
       }
-      else if(filterValues[2] != -1 && (parseFloat(displayedRevenue) < parseFloat(filterValues[[2]]))){
+      else if(filterValues[2] !== -1 && (parseFloat(displayedRevenue) < parseFloat(filterValues[[2]]))){
       }
-      else if(filterValues[3] != -1 && (parseFloat(displayedRevenue) > parseFloat(filterValues[[3]]))){
+      else if(filterValues[3] !== -1 && (parseFloat(displayedRevenue) > parseFloat(filterValues[[3]]))){
       } 
-      else if(filterValues[4] != -1 && (parseFloat(displayedIncome) < parseFloat(filterValues[[4]]))){
+      else if(filterValues[4] !== -1 && (parseFloat(displayedIncome) < parseFloat(filterValues[[4]]))){
       } 
-      else if(filterValues[5] != -1 && (parseFloat(displayedIncome) > parseFloat(filterValues[[5]]))){
+      else if(filterValues[5] !== -1 && (parseFloat(displayedIncome) > parseFloat(filterValues[[5]]))){
       } else{
         arr.push(TV[i]);
       }
@@ -96,7 +96,7 @@ function App() {
 
     let newArr = []
 
-    for(let i = 0; i!= arr.length; i++){ //fixes the case of undefined in the array
+    for(let i = 0; i !== arr.length; i++){ //fixes the case of undefined in the array
       if(typeof arr[i] !== 'undefined'){
         newArr.push(arr[i]);
       }
@@ -104,15 +104,13 @@ function App() {
 
     setTV(originalTV);
     setTV(newArr);
-    
-
   },[filterValues]);
 
   return (
     <>
       <FilterMenu currentClassName={filterMenuClass} changeClassName={setFilterMenuClass} setFilterValues={setFilterValues} setTV = {setTV} originalTV = {originalTV}/>
       <div className='tableDiv'>
-        <TableElement tableValues = {TV} setSortValues = {setSortValues} sortValue = {sortValues}/>
+        <TableElement className='w-[100vh] bg-[rgb(220),(220),(220)]' tableValues = {TV} setSortValues = {setSortValues} sortValue = {sortValues}/>
       </div>
     </>
   );
