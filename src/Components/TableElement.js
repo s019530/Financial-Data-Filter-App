@@ -2,7 +2,13 @@ import './TableElement.css'
 
 function TableElement(props){
 
-  let tableValues = props.tableValues;
+  let theValues = props.tableValues;
+
+
+  let tableValues = [...theValues];
+
+  //tableValues = addComas(tableValues);
+
 
   const tableButtonHandler = (arr) => {
   var dateElement = document.getElementById('dateHeader');
@@ -52,19 +58,19 @@ function TableElement(props){
             {tableValues[0]}
           </th>
           <th className='data-th'>
-            {tableValues[1]}
+            {addComasHelper(tableValues[1])}
           </th>
           <th className='data-th'>
-            {tableValues[2]}
+            {addComasHelper(tableValues[2])}
           </th>
           <th className='data-th'>
-            {tableValues[3]}
+            {addComasHelper(tableValues[3])}
           </th>
           <th className='data-th'>
             {tableValues[4]}
           </th>
           <th className='data-th'>
-            {tableValues[5]}
+            {addComasHelper(tableValues[5])}
           </th>
         </tr>
         )}
@@ -74,3 +80,27 @@ function TableElement(props){
 }
 
 export default TableElement;
+
+function addComasHelper(input){
+  let newString = '';
+
+  if(typeof input === 'undefined'){
+    return input;
+  }
+
+  input = input.split('').reverse().join('');
+
+  for(var i = input.length-1; i !== -1; i--){
+    newString += input[i];
+    if(i%3 === 0){
+      newString += ',';
+    }
+  }
+  if(newString[newString.length-1] === ','){
+    newString = newString.substring(0, newString.length-1);
+  }
+  if(newString[0] === ','){
+    newString = newString.substring(1, newString.length);
+  }
+  return newString;
+}

@@ -21,10 +21,10 @@ function FilterMenu(props){
 
 
     const saveButton = () =>{
-        const revFrom = document.getElementById('revFrom').value;
-        const revTo = document.getElementById('revTo').value;
-        const incFrom = document.getElementById('incFrom').value;
-        const incTo = document.getElementById('incTo').value;
+        const revFrom = removeComas(document.getElementById('revFrom').value);
+        const revTo = removeComas(document.getElementById('revTo').value);
+        const incFrom = removeComas(document.getElementById('incFrom').value);
+        const incTo = removeComas(document.getElementById('incTo').value);
 
         let newFilters = [-1,-1,-1,-1,-1,-1];
 
@@ -82,6 +82,14 @@ function FilterMenu(props){
     }
 
     const resetButton = () => {
+        
+        document.getElementById('toYear').value = '';
+        document.getElementById('fromYear').value = '';
+        document.getElementById('revFrom').value = '';
+        document.getElementById('revTo').value = '';
+        document.getElementById('incFrom').value = '';
+        document.getElementById('incTo').value = '';
+
         props.setTV(props.originalTV);
     }
 
@@ -123,3 +131,9 @@ function FilterMenu(props){
 }
 
 export default FilterMenu;
+
+
+function removeComas(input){
+    var out = input.replaceAll(',','');
+    return out;
+}
