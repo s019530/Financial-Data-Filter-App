@@ -3,7 +3,7 @@
 
 ## Run Locally
 
-After cloning the project directory, you can run: `npm start` to run the website locally
+After cloning the project directory, you can run: `npm run start` to run the website locally
 
 ## Deployed Website Link
 
