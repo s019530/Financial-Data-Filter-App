@@ -88,7 +88,7 @@ function addComasHelper(input){
     return input;
   }
 
-  input = input.split('').reverse().join('');
+  input = input.toString().split('').reverse().join('');
 
   for(var i = input.length-1; i !== -1; i--){
     newString += input[i];

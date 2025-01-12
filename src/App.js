@@ -17,13 +17,14 @@ function App() {
 
   useEffect(() => {
     var values = []
-    values[0] = ["2024-01-01", "1234567", "56789", "12345", "6.6", "12345"];
+    //Test Data
+    /*values[0] = ["2024-01-01", "1234567", "56789", "12345", "6.6", "12345"];
     values[1] = ["2024-02-01", "222222", "55", "66", "6.6", "66"];
     values[2] = ["2024-07-02", "333333", "55", "66", "6.6", "66"];
     values[3] = ["2024-04-01", "11111", "55", "66", "6.6", "66"];
-    values[4] = ["2024-07-01", "55555", "55", "66", "6.6", "66"];
+    values[4] = ["2024-07-01", "55555", "55", "66", "6.6", "66"];*/
 
-    /*fetch("https://financialmodelingprep.com/api/v3/income-statement/AAPL?period=annual&apikey=GMwFClmiEMzjONoUeFyRnFhKL2ceTUhz").then(function (response){
+    fetch("https://financialmodelingprep.com/api/v3/income-statement/AAPL?period=annual&apikey=GMwFClmiEMzjONoUeFyRnFhKL2ceTUhz").then(function (response){
       return response.json();
     }).then(function (data){
       for(let i = 0; i !== data.length; i++){
@@ -31,8 +32,8 @@ function App() {
       }
       setTV(values);
       setoriginalTV(values);
-    })*/
-
+    })
+    
     setTV(values);
     setoriginalTV(values);
 
